@@ -1,15 +1,18 @@
-# Little Lemon Database Project
+# Little Lemon Database Engineering Project
 
-This repository contains the Little Lemon booking database implementation for peer review.
+Production-style capstone repository for Little Lemon database design, booking procedures, Python MySQL integration, and analytics artifacts.
 
-## Included deliverables
+## Repository structure
 
-- Database schema SQL: `little_lemon_schema.sql`
-- Stored procedures SQL: `little_lemon_stored_procedures.sql`
-- Python script for procedure calls: `little_lemon_db_client.py`
-- Notes for reviewers: `notes.txt`
+- `Data/` - source dataset notes and placement guide
+- `LittleLemonDataModel/` - schema SQL and ER-model notes
+- `LittleLemon_Store_Procedure/` - required booking stored procedures
+- `PythonSQLConnector/` - Python client to execute procedures
+- `Tableau/` - Tableau workbook placement and dashboard notes
+- `ProjectSampleImg/` - screenshots placement guide for peer review
+- `notes.txt` - rubric checklist for reviewers
 
-## Required stored procedures
+## Required procedures implemented
 
 - `GetMaxQuantity()`
 - `ManageBooking()`
@@ -17,10 +20,17 @@ This repository contains the Little Lemon booking database implementation for pe
 - `AddBooking()`
 - `CancelBooking()`
 
-## How to run
+## Quick start
 
-1. Execute `little_lemon_schema.sql` in MySQL Workbench.
-2. Execute `little_lemon_stored_procedures.sql`.
-3. Update credentials in `little_lemon_db_client.py`.
-4. Run:
-   - `python little_lemon_db_client.py`
+1. Run `LittleLemonDataModel/little_lemon_schema.sql`.
+2. Run `LittleLemon_Store_Procedure/little_lemon_stored_procedures.sql`.
+3. Update database credentials in `PythonSQLConnector/little_lemon_db_client.py`.
+4. Execute `python PythonSQLConnector/little_lemon_db_client.py`.
+
+## Peer-review checklist mapping
+
+- GitHub repo available and organized by deliverable type.
+- SQL schema provided.
+- All required procedures provided and callable.
+- Python connector demonstrates procedure execution flow.
+- Supporting notes included for ER and Tableau assets.

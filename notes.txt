@@ -1,0 +1,15 @@
+Peer review checklist support:
+
+1) GitHub repository created.
+2) Project files included for Little Lemon database implementation.
+3) Stored procedures included:
+   - GetMaxQuantity()
+   - ManageBooking()
+   - UpdateBooking()
+   - AddBooking()
+   - CancelBooking()
+
+If needed, run in this order:
+1. little_lemon_schema.sql
+2. little_lemon_stored_procedures.sql
+3. little_lemon_db_client.py

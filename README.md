@@ -34,3 +34,10 @@ Production-style capstone repository for Little Lemon database design, booking p
 - All required procedures provided and callable.
 - Python connector demonstrates procedure execution flow.
 - Supporting notes included for ER and Tableau assets.
+
+## Important rubric files
+
+- `LittleLemonDM.png` (required filename for ER data model image check)
+- `LittleLemonDataModel/little_lemon_schema.sql`
+- `LittleLemon_Store_Procedure/little_lemon_stored_procedures.sql`
+- `PythonSQLConnector/little_lemon_db_client.py`

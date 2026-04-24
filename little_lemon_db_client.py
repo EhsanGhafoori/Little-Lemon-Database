@@ -29,9 +29,10 @@ def main():
 
         call_procedure(cursor, "GetMaxQuantity")
         call_procedure(cursor, "ManageBooking", ["2026-02-11", 5])
-        call_procedure(cursor, "UpdateBooking", [1, "2026-02-15"])
-        call_procedure(cursor, "AddBooking", [10, 1, "2026-02-20", 4])
-        call_procedure(cursor, "CancelBooking", [10])
+        call_procedure(cursor, "ManageBooking", ["2026-03-01", 7])
+        call_procedure(cursor, "AddBooking", [99, 99, 99, "2022-12-10"])
+        call_procedure(cursor, "UpdateBooking", [99, "2022-01-10"])
+        call_procedure(cursor, "CancelBooking", [99])
 
         connection.commit()
         print("All changes committed.")

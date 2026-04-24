@@ -24,6 +24,21 @@ CREATE TABLE IF NOT EXISTS Orders(
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
 );
 
+CREATE TABLE IF NOT EXISTS MenuItems(
+    MenuItemsID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    StarterName VARCHAR(100),
+    DesertName VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS Menus(
+    MenuID INT PRIMARY KEY,
+    MenuItemsID INT,
+    MenuName VARCHAR(100),
+    Cuisine VARCHAR(100),
+    FOREIGN KEY (MenuItemsID) REFERENCES MenuItems(MenuItemsID)
+);
+
 INSERT IGNORE INTO Customers(CustomerID, FullName, ContactNumber, Email) VALUES
 (1, 'Alice Johnson', '1111111111', 'alice@example.com'),
 (2, 'Bob Smith', '2222222222', 'bob@example.com'),
@@ -36,5 +51,13 @@ INSERT IGNORE INTO Bookings(BookingID, BookingDate, TableNumber, CustomerID) VAL
 
 INSERT IGNORE INTO Orders(OrderID, BookingID, BillAmount, Quantity) VALUES
 (1, 1, 120.00, 2),
-(2, 2, 200.00, 4),
+(2, 2, 200.00, 5),
 (3, 3, 150.00, 3);
+
+INSERT IGNORE INTO MenuItems(MenuItemsID, CourseName, StarterName, DesertName) VALUES
+(1, 'Main Course A', 'Starter A', 'Desert A'),
+(2, 'Main Course B', 'Starter B', 'Desert B');
+
+INSERT IGNORE INTO Menus(MenuID, MenuItemsID, MenuName, Cuisine) VALUES
+(1, 1, 'Classic Menu', 'Mediterranean'),
+(2, 2, 'Seasonal Menu', 'Italian');
